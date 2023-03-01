@@ -16,11 +16,11 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 2vmin); */
   color: white;
 }
 
@@ -35,4 +35,214 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navColor {
+  background-color: rgb(30, 30, 42);
+}
+
+.navColor a {
+  color: white;
+}
+
+.flightRowBox {
+  border: 1px solid;
+  /* margin: 0.5rem;  */
+  padding: 0.5rem; 
+  margin-bottom: 0.5rem;
+  border-radius: 5px; 
+}
+
+.flightRowBox p {
+  margin: 0;
+}
+
+.homePic {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.9;
+  top: 4.5rem;
+}
+
+.searchBox {
+  z-index: 100 !important;
+  background-color: rgb(212, 212, 212);
+  padding: 1rem;
+  position: relative;
+  width: 50%;
+  border-radius: 5px;
+  margin-top: 2rem;
+}
+
+.priceBlock {
+  text-align: center;
+  border: 1px solid grey;
+  margin: 0 0 0.5rem 0.5rem;
+  padding-top: 0.5rem;
+  border-radius: 5px;
+}
+
+.priceBlock p {
+  font-size: 150%;
+}
+
+.priceBlock:hover {
+  background-color: rgb(0, 60, 128);
+  color: white;
+  cursor: pointer;
+}
+
+.priceBlockDisabled {
+  /* background-color: rgb(239, 239, 239); */
+  background-color: #3a404c;
+  text-align: center;
+  border: 1px solid grey;
+  margin: 0 0 0.5rem 0.5rem;
+  padding-top: 0.5rem;
+  border-radius: 5px;
+}
+
+.flightInfoBox {
+  margin: 0 0 0.5rem 0.5rem;
+  border: 1px solid grey;
+  /* margin: 0.5rem; */
+  border-radius: 5px;
+  padding:0. 5rem;
+  /* background-color: rgb(235, 235, 235); */
+  background-color: #3a404c;
+}
+.flightInfoBox p {
+  margin-bottom: 0;
+}
+.flightInfoBox h4 {
+  margin-bottom: 0;
+}
+
+.buttonTime {
+  z-index: 20;
+  position: absolute;
+  margin-top: 2rem;;
+}
+
+.offerBlock {
+  border: 1px solid grey;
+  background-color: rgb(135, 138, 142);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.offerBlock p, .offerBlock h4 {
+  margin-bottom: 0;
+}
+
+/* MEAL */
+.mealSelection {
+  padding: 0.5rem;
+  border: 1px solid grey;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 1rem 0 5rem 0;
+}
+
+.qGreen {
+  color: rgb(96, 187, 82);
+}
+
+.qRed {
+  color:rgb(143, 52, 52)
+}
+
+.qCenter {
+  text-align: center;
+}
+
+.iconCol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0;
+}
+/* CSS LOADER */
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid grey;
+  border-color: grey transparent grey transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.featureBlock {
+  border: 1px solid grey;
+}
+
+.calloutBox {
+  /* border: 1px solid grey; */
+  border: 2px solid rgb(173, 170, 200);
+  /* background-color: rgb(226, 226, 247); */
+  background-color: rgb(45, 45, 74);
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.5rem;
+  color: rgb(182, 182, 182);
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.calloutBox p {
+  margin-bottom: 0;
+}
+
+.buttonCenter {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.userName {
+  margin: 0 0 0 auto;
+}
+
+.blink {
+  /* BLINK */
+  /* animation: blinker 1s step-start infinite; */
+  /* FADE IN AND OUT */
+  animation: fade 2s linear infinite;
+}
+
+@keyframes fade {
+  0%,100% { opacity: 0.7 }
+  50% { opacity: 1 }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.8;
+  }
+  /* from { opacity: 1.0; }
+        50% { opacity: 0.5; }
+        to { opacity: 1.0; } */
+}
+
+.autoWidth {
+  width: auto !important;
 }
