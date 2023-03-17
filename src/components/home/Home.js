@@ -17,6 +17,9 @@ const Home = () => {
 };
 
 const ReservationBox = () => {
+  let departDate = setDate(3);
+  let arriveDate = setDate(10);
+
   return (
     <div className="searchBox">
       <h3>Where are you going?</h3>
@@ -31,10 +34,10 @@ const ReservationBox = () => {
         </div>
         <div className="row">
           <div className="col">
-            <FormInput label="Depart" type="date" />
+            <FormInput label="Depart" type="date" value={departDate} />
           </div>
           <div className="col">
-            <FormInput label="Return" type="date" />
+            <FormInput label="Return" type="date" value={arriveDate} />
           </div>
         </div>
         <br />
@@ -65,6 +68,13 @@ const ReservationBox = () => {
 
 const FormButton = ({ text, click, className }) => {
   return <button className={`btn btn-primary ${className}`}>{text}</button>;
+};
+
+const setDate = (days) => {
+  let result = new Date();
+  result.setDate(result.getDate() + days);
+  let month = ("0" + result.getMonth()).slice(-2);
+  return `${result.getFullYear()}-${month}-${result.getDate()}`;
 };
 
 export default Home;
