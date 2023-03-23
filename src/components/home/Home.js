@@ -26,10 +26,10 @@ const ReservationBox = () => {
       <div>
         <div className="row">
           <div className="col">
-            <FormInput label="From" value="San Francisco" />
+            <FormInput label="From" value="San Francisco (SFO)" />
           </div>
           <div className="col">
-            <FormInput label="To" value="Vienna" />
+            <FormInput label="To" value="Vienna (VIE)" />
           </div>
         </div>
         <div className="row">
